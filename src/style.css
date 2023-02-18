@@ -224,7 +224,7 @@ header .header-content a{
 .tools_site-content .tools_site-start article a{
     padding: .8rem 1.9rem;
     border-radius: .4rem;
-    margin: 0 1rem;
+    margin: .5rem;
     cursor: pointer;
 }
 .tools_site-content .tools_site-start article a:nth-child(1){
@@ -283,6 +283,7 @@ header .header-content a{
 .tools_site-cards--container .tools_site-card hr{
     margin-bottom: 1rem;
 }
+
 .tools_site-cards--container .tools_site-card span{
     font-size: 1.2rem;
     color: #000000b7;
@@ -338,11 +339,10 @@ header .header-content a{
         height: 20%;
     }
 }
-@media (max-width: 610px) {
+@media (max-width: 600px) {
     .tools_site-content .tools_site-start article a{
         padding: .8rem 1.9rem;
         border-radius: .4rem;
-        margin: .5rem 0;
         cursor: pointer;
     }
 }
@@ -382,12 +382,11 @@ header .header-content a{
     margin-top: 2rem;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 6px;
 }
 .grid_infos-content .grid_squares-infos .square_info-grid{
     height: 250px;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -395,13 +394,9 @@ header .header-content a{
     text-align: center;
     padding: 2%;
     transition: .3s;
+    border: 1px solid #fff;
 }
-.grid_infos-content .grid_squares-infos .square_info-grid:nth-child(n+5) {
-    border-bottom: 0;
-}
-.grid_infos-content .grid_squares-infos .square_info-grid:nth-child(4n) {
-    border-right: 0;
-}
+
 .grid_infos-content .grid_squares-infos .square_info-grid h2{
     font-size: 2.4rem;
     margin: 1rem 0;
@@ -454,7 +449,11 @@ header .header-content a{
 .start_customer-content .start_customer_sup ul li img{
     width: 120px;
 }
-
+@media (max-width: 470px) {
+    .tools_site-cards--container .tools_site-card{
+        height: 640px;
+    }
+}
 @media (max-width: 960px) {
     .start_customer-content .start_customer_sup ul{
         order: 1;
@@ -546,4 +545,22 @@ footer .footer_content ul{
 footer .footer_content ul li{
     margin: 0 .7rem;
     font-size: 2rem;
+}
+.removeScrool{
+    overflow-y: hidden;
+}
+.menu_bar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #fff;
+    z-index: 20;
+    overflow-y: auto;
+    padding: 1rem;
+}
+.menu_bar .menu_bar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
